@@ -1,0 +1,6 @@
+[book]
+authors = ["Raúl Gómez i Víctor Parrilla"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Software Distribuit 2023/2024"

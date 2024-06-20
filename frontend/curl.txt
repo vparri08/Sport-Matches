@@ -1,0 +1,203 @@
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/users/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "test_admin@sd.ub.edu",
+  "is_active": true,
+  "is_superuser": true,
+  "full_name": "test_admin@sd.ub.edu",
+  "available_money": 1000,
+  "password": ".test_1dm3n!"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/users/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "test_user@sd.ub.edu",
+  "is_active": true,
+  "is_superuser": false,
+  "full_name": "test_user@sd.ub.edu",
+  "available_money": 1000,
+  "password": ".test_5s2r!"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/users/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "test_rich_user@sd.ub.edu",
+  "is_active": true,
+  "is_superuser": false,
+  "full_name": "test_rich_user@sd.ub.edu",
+  "available_money": 1000000,
+  "password": ".test_r3ch!"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/users/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "test_poor_user@sd.ub.edu",
+  "is_active": true,
+  "is_superuser": false,
+  "full_name": "test_poor_user@sd.ub.edu",
+  "available_money": 50,
+  "password": ".test_p44r!"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/users/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "email": "test_organizer_user@sd.ub.edu",
+  "is_active": true,
+  "is_superuser": false,
+  "full_name": "test_organizer_user@sd.ub.edu",
+  "available_money": 1000,
+  "password": ".test_4rg1n3z2r!"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/competitions/competition' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Paris Olympic Games",
+  "category": "senior",
+  "sport": "basketball"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/competitions/competition' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "SD Empty Competition",
+  "category": "senior",
+  "sport": "basketball"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/competitions/competition' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Football",
+  "category": "senior",
+  "sport": "futsal"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/competitions/competition' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "VolleyBall",
+  "category": "junior",
+  "sport": "volleyball"
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/teams/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Australia",
+  "country": "Australia",
+  "description": ""
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/teams/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "USA",
+  "country": "USA",
+  "description": ""
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/teams/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "France",
+  "country": "France",
+  "description": ""
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/teams/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Germany",
+  "country": "Germany",
+  "description": ""
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/teams/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Japan",
+  "country": "Japan",
+  "description": ""
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/teams/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Canada",
+  "country": "Canada",
+  "description": ""
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/matches/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "data": "2024-07-29",
+  "price": 325,
+  "total_available_tickets": 100,
+  "local_team": "Australia",
+  "visitor_team": "France",
+  "competition_id": 1
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/matches/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "data": "2024-07-29",
+  "preu": 632,
+  "total_available_tickets": 20,
+  "local_team": "USA",
+  "visitor_team": "Germany",
+  "competition_id": 1
+}'
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/api/v1/matches/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "data": "2024-07-29",
+  "preu": 50,
+  "total_available_tickets": 3,
+  "local_team": "Japan",
+  "visitor_team": "Canada",
+  "competition_id": 1
+}'
